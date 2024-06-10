@@ -1,113 +1,84 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+import SVG_1 from '@/public/svg/1.svg';
+import SVG_2 from '@/public/svg/2.svg';
+import SVG_3 from '@/public/svg/3.svg';
+import SVG_4 from '@/public/svg/4.svg';
+import SVG_5 from '@/public/svg/5.svg';
+import SVG_6 from '@/public/svg/6.svg';
+import Image from 'next/image';
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+const Layout = () => {
+	return (
+		<div className='mx-auto w-full lg:max-w-[988px] p-3 lg:p-0 mb-[40px]'>
+			<div className='flex flex-col lg:flex-row items-center'>
+				<div>
+					<Image src={SVG_1} width={'100%'} height={'100%'} alt='logo' />
+				</div>
+				<div className='lg:w-[480px] flex flex-col space-y-4'>
+					<div className='text-[28px] text-[#4b4b4b] leading-normal text-center font-bold'>Dil öğrenmenin ücretsiz, eğlenceli ve etkili yolu!</div>
+				</div>
+			</div>
+			<div className='flex flex-col lg:flex-row items-center'>
+				<div className='flex flex-col space-y-4 w-full lg:max-w-[503px]'>
+					<div className='text-[48px] text-primary leading-normal font-bold'>ücretsiz. eğlenceli. etkili.</div>
+					<div className='text-[17px] leading-[24px] text-[#777777] font-medium'>
+						Çabuk Öğren ile öğrenmek hem eğlencelidir hem de araştırmalarımız işe yaradığını gösterir! Hızlı ve kısa süren derslerle gerçek hayattaki
+						iletişim becerilerini kazanırken puan kazanır ve yeni düzeylerin kilidini açabilirsin.
+					</div>
+				</div>
+				<div>
+					<Image className='object-cover' src={SVG_2} width={'100%'} height={'100%'} alt='logo' />
+				</div>
+			</div>
+			<div className='flex flex-col lg:flex-row items-center'>
+				<div>
+					<Image className='object-cover' src={SVG_3} width={'100%'} height={'100%'} alt='logo' />
+				</div>
+				<div className='flex flex-col space-y-4 w-full lg:max-w-[503px]'>
+					<div className='text-[48px] text-primary leading-normal font-bold'>bilime dayalı</div>
+					<div className='text-[17px] leading-[24px] text-[#777777] font-medium'>
+						Okuma, yazma, dinleme ve konuşma becerilerini etkili bir öğreten kurslar oluşturmak için araştırmaya dayalı öğretim yöntemleri ile keyifli
+						içeriğin bir kombinasyonunu kullanıyoruz!
+					</div>
+				</div>
+			</div>
+			<div className='flex flex-col lg:flex-row items-center'>
+				<div className='flex flex-col space-y-4 w-full lg:max-w-[503px]'>
+					<div className='text-[48px] text-primary leading-normal font-bold'>motivasyonunu koru</div>
+					<div className='text-[17px] leading-[24px] text-[#777777] font-medium'>
+						Oyun tarzında özellikler, eğlenceli mücadeleler ve dost canlısı maskotumuz baykuş hatırlatmaları ile dil öğrenimini alışkanlık haline
+						getirmeyi kolaylaştırıyoruz.
+					</div>
+				</div>
+				<div>
+					<Image className='object-cover' src={SVG_4} width={'100%'} height={'100%'} alt='logo' />
+				</div>
+			</div>
+			<div className='flex flex-col lg:flex-row items-center'>
+				<div>
+					<Image className='object-cover' src={SVG_5} width={'100%'} height={'100%'} alt='logo' />
+				</div>
+				<div className='flex flex-col space-y-4 w-full lg:max-w-[503px]'>
+					<div className='text-[48px] text-primary leading-normal font-bold'>kişiselleştirilmiş öğrenim</div>
+					<div className='text-[17px] leading-[24px] text-[#777777] font-medium'>
+						Yapay zeka ve dil biliminin en yararlı özelliklerinin bir araya getirildiği derslerimiz, en doğru düzey ve hızda öğrenmene yardımcı olacak
+						şekilde sana özel hale geliyor.
+					</div>
+				</div>
+			</div>
+			<div className='flex items-center justify-center'>
+				<div className='flex flex-col lg:flex-row items-center'>
+					<div className='flex flex-col space-y-4 w-full lg:max-w-[503px]'>
+						<div className='text-[48px] text-primary leading-normal font-bold'>Power Up With Çabuk Öğren</div>
+					</div>
+					<div>
+						<Image className='object-cover' src={SVG_6} width={'100%'} height={'100%'} alt='logo' />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
-}
+export default Layout;
